@@ -89,6 +89,17 @@ execute "apt-get update" do
   command "apt-get update"
 end
 
+package 'resolvconf'
+
+#DNS search
+file '/etc/resolvconf/resolv.conf.d/base' do
+  owner 'root'
+  group 'root'
+  mode '0644'
+  content <<-EOH
+search front.sepia.ceph.com cloud.sepia.ceph.com sepia.ceph.com
+EOH
+end
 
 # Packages needed for slaves
 package 'automake'
