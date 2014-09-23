@@ -136,7 +136,9 @@ package 'gperftools-devel'
 package 'gtk2-devel'
 package 'gtkmm24'
 package 'gtkmm24-devel'
-package 'junit4'
+package 'junit4' do
+  action :upgrade
+end
 package 'keyutils-libs-devel'
 package 'leveldb-devel'
 package 'libaio'
