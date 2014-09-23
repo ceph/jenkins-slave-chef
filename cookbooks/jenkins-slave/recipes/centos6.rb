@@ -135,6 +135,7 @@ package 'gperftools-devel'
 package 'gtk2-devel'
 package 'gtkmm24'
 package 'gtkmm24-devel'
+package 'junit'
 package 'junit4' do
   action :upgrade
 end
