@@ -1,3 +1,5 @@
+include_recipe "jenkins-slave::static-route-rpm"
+
 #Local Epel Mirror:
 cookbook_file '/etc/yum.repos.d/epel.repo' do
   source "epel6.repo"

@@ -1,3 +1,4 @@
+include_recipe "jenkins-slave::static-route-rpm"
 
 file '/etc/yum.repos.d/apache-ceph.repo' do
   owner 'root'
