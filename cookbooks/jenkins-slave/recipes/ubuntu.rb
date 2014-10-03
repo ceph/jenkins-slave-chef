@@ -1,3 +1,4 @@
+include_recipe "jenkins-slave::static-route-deb"
 
 #Apt priority
 file '/etc/apt/preferences.d/ceph.pref' do

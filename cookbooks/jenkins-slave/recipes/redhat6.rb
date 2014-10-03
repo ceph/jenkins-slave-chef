@@ -1,3 +1,5 @@
+include_recipe "jenkins-slave::static-route-rpm"
+
 #Local Epel Mirror:
 cookbook_file '/etc/yum.repos.d/epel.repo' do
   source "epel6.repo"
@@ -136,7 +138,10 @@ package 'gperftools-devel'
 package 'gtk2-devel'
 package 'gtkmm24'
 package 'gtkmm24-devel'
-package 'junit4'
+package 'junit'
+package 'junit4' do
+  action :upgrade
+end
 package 'keyutils-libs-devel'
 package 'leveldb-devel'
 package 'libaio'
