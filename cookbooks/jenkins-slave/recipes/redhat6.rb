@@ -221,3 +221,4 @@ service "httpd" do
   action [ :disable, :stop ]
 end
 
+include_recipe "jenkins-slave::redhat-mock"
