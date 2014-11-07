@@ -90,3 +90,5 @@ execute "Sudoers and security/lmits.conf changes" do
     sed -i 's/^#\*.*soft.*core.*0/\*                soft    core            unlimited/g' /etc/security/limits.conf
   EOH
 end
+
+include_recipe "jenkins-slave::redhat-mock"
