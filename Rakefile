@@ -1,9 +1,18 @@
 #!/usr/bin/env rake
 
-require 'foodcritic'
+begin
+  require 'foodcritic'
+rescue LoadError
+  # foodcritic task will be unavailable
+end
 
 desc 'Runs foodcritic linter'
 task :foodcritic do
+  unless defined?(FoodCritic)
+    warn 'Please install the "foodcritic" gem.'
+    exit 1
+  end
+
   files = Dir.glob('./cookbooks/**/*.rb')
 
   files.each do |file|
