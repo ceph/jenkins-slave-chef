@@ -45,9 +45,9 @@ if node[:platform] == "fedora"
   include_recipe "jenkins-slave::fedora"
 end
 
-# Setup Timezone
+# Set up Timezone
 include_recipe "jenkins-slave::timezone"
 
-# Setup Jenkins user/keys/files
+# Set up Jenkins user/keys/files
 include_recipe "jenkins-slave::jenkins"
 
